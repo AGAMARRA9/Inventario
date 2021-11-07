@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/proveedores', 'ProveedoresController@index')->name('proveedores.index');
+Route::get('/categorias', 'CategoriasController@index')->name('categorias.index');
+Route::get('/clientes', 'ClientesController@index')->name('clientes.index');
+Route::get('/productos', 'ProductosController@index')->name('productos.index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
